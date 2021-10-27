@@ -1,0 +1,23 @@
+<h3>{{thisItem.name}}</h3>
+
+<img class="item-img" src="{{thisItem.image}}" />
+
+<div class="row">
+	<h5>{{thisItem.description}}</h5>
+	<h5>Price: {{thisItem.price}}</h5>
+	<h5>Category: {{thisItem.Category.name}}</h5>
+</div>
+<div>
+    <button type="button" class="button buttonOneItem" onclick="goPrev()">Back to Inventory</button>
+	<script>
+		function goPrev()
+		{
+			window.history.back();
+		}
+	</script>
+</div> 
+
+<div>
+
+	<button class="button deleteButton" id="delete-btn" data-item={{thisItem.id}} data-warehouse={{thisItem.Warehouse.id}}>delete this item</button>
+</div>

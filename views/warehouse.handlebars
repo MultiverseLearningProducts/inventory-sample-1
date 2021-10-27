@@ -1,0 +1,20 @@
+<h1>{{thisWarehouse.name}}</h1>
+
+<h2>There are {{thisWarehouse.Items.length}} items in stock.</h2>
+
+<div class="site-nav">
+    <a href="/warehouses" class="back-to-warehouses">Back to All Warehouses</a>
+    <a href="/addItem" class="addItem">Add Item</a> 
+</div>
+
+<div class="toy-cards">
+    {{#each thisWarehouse.Items}}  
+        <div class="card col-md-4">
+            <h3>{{name}}</h3>
+            <img class="item-img" src="{{image}}" />
+                <div>
+                    <a href="/item/{{id}}">See Toy</a>
+                </div>
+        </div>
+    {{/each}}
+    </div>
